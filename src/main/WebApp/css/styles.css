@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+        /* giúp kiểm soát tổng thể kích thước */
+}
+html{
+    font-size: 62.5%;
+        /* quy đổi 1 rem = 10px */
+    --color--midnight:#0b2642;
+    --text-color-hero: #171100;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ==================common================= */
+a{
+    text-decoration: none;
+}
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 40px);
+        /* Khi thu nhỏ trình duyệt 2 bên vẫn cách 40px */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .icon-bottom{
+    font-size: 50px; 
+    position: fixed;
+    right: 9px;
+    bottom: 40px;
+}
+.fa-facebook-messenger{
+    color: #00a1ff;
+} */
+/* ==================header================= */
+.header{
+    height: 110px;
+    /* background-color: rgb(75, 189, 204); */
+    /* background-image: url(../IMG/banner.jpg); */
+}
+    /* cố định thanh nav */
+.header.fixed{
+    position: sticky;
+    top: -30px;
+    background-color: #fff;
+    /* border: 0.1px solid black; */
+    /* padding-right: 2px; */
+    box-shadow: 0 0 0 0.5px #17110026;
+}
+.header .body{
+    display: flex;
+    align-items: center;
+    padding: 35px 0px 0px;
+}
+.nav ul{
+    display: flex;
+}
+.action ul{
+    display: flex;
+}
+.nav{
+    margin-left: auto;
+}
+.nav a{
+    position: relative;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    margin: 8px 21px;
+    /* background-color: blue; */
+}
+    /* bôi đậm khi di chuột và click vào */
+.nav li.active a,
+.nav a:hover{
+    color: #171100;
+    text-shadow: 0.8px 0 0 currentColor;
+}
+    /* click */
+.nav li.active a:after{
+    position: absolute;
+    left: 0;
+    bottom: 0.1px;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+.btn{
+    display: block;
+    min-width: 100px;
+    padding: 18px 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 24.5px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #171100;
+}
+.header .btn-sign-up{
+    margin-left: 0 px;
+}
+.header .btn-sign-in{
+    margin-right: 10px;
+    margin-left: 49px;
+}
+.header .btn-sign-up:hover,
+.header .btn-sign-in:hover{
+    /* color: #5f5b53; */
+    background-color: #000000a6 ;
+    text-decoration: underline;
+}
+.logo{
+    width: 120px;
+    height: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    align-self: center;
+}
+/* ==============hero================ */
+.hero{
+    padding-top: 96px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #beebf8, #165096);
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 0px 0px 90px 90px;
+    height: 70rem;
+}
+.hero-element .header{
+    color: var(--text-color-hero);
+    text-align: center;
+    font-size: 6.4rem;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 700;
+}
+div .space{
+    width: 100%;
+    padding-top: 4rem;
+}
+.hero-txt{
+    color: var(--text-color-hero);
+    text-align: center;
+    font-weight: 500;
+}
+.hero-btn{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    margin-bottom: 60px;
+}
+.join-us-btn{
+    background-color: #086dff;
+    padding: 18px 48px;
+    margin-right: 15px;
+}
+.hero-btn a:nth-child(2){
+    color: var(--text-color-hero);
+    font-weight: 600;
+    display: inline-block; 
+    border-bottom: 2px solid var(--text-color-hero); 
+    padding-bottom: 5px; 
+}
+.hero-btn a:first-child:hover{
+    background-color: #024bb0;
+}
+.hero-icon{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.icon-text {
+    text-align: center;
+}
+.hero-icon i{
+    font-size: 4rem;
+    color: var(--text-color-hero);
+    /* color: #fff; */
+}
+.hero-icon p {
+    font-family:"Inter", sans-serif;
+    font-weight: 500;
+    margin-top: 10px; 
+    font-size: 1.6rem;
+    color: var(--text-color-hero); 
+    /* color: #fff */
+}
+.hero-icon{
+    gap: 150px;
+}
