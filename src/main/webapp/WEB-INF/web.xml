@@ -16,18 +16,13 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <!-- Servlet mapping for index.jsp -->
+    <!-- Servlet mapping for JSP files (Remove if not needed) -->
     <servlet-mapping>
         <servlet-name>jsp</servlet-name>
-        <url-pattern>/index.jsp</url-pattern>
+        <url-pattern>*.jsp</url-pattern>
     </servlet-mapping>
 
-    <!-- Servlet mapping for sign-in.jsp -->
-    <servlet-mapping>
-        <servlet-name>jsp</servlet-name>
-        <url-pattern>/sign-in.jsp</url-pattern>
-    </servlet-mapping>
-
+    <!-- Servlet for RegisterServlet -->
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.taskflow.servlet.RegisterServlet</servlet-class>
@@ -53,6 +48,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <!-- Mapping for CSS and other static resources -->
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/css/*</url-pattern>
@@ -63,9 +59,15 @@
         <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
 
+    <!-- Mapping for HTML files -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+
     <!-- Welcome file configuration -->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
 </web-app>
