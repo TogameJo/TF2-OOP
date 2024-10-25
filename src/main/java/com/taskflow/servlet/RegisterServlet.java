@@ -17,9 +17,9 @@ public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // Database connection parameters
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/your_database"; // Thay 'your_database' bằng tên cơ sở dữ liệu của bạn
-    private static final String DB_USER = "your_username"; // Thay 'your_username' bằng tên người dùng của bạn
-    private static final String DB_PASSWORD = "your_password"; // Thay 'your_password' bằng mật khẩu của bạn
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/user_management"; 
+    private static final String DB_USER = "root"; 
+    private static final String DB_PASSWORD = "B22dcat143abc123"; 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
@@ -32,7 +32,7 @@ public class RegisterServlet extends HttpServlet {
 
         // Kiểm tra mật khẩu có khớp hay không
         if (!password.equals(confirmPassword)) {
-            response.sendRedirect("signup.jsp?error=passwordsDoNotMatch"); //gửi thông báo lỗi về sign-up
+            response.sendRedirect("signup.html?error=passwordsDoNotMatch"); //gửi thông báo lỗi về sign-up
             return;
         }
 
@@ -45,10 +45,10 @@ public class RegisterServlet extends HttpServlet {
                 preparedStatement.setString(3, password);
                 preparedStatement.executeUpdate();
             }
-            response.sendRedirect("signup.jsp?success=registrationSuccessful");
+            response.sendRedirect("signup.html?success=registrationSuccessful");
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("signup.jsp?error=registrationFailed");
+            response.sendRedirect("signup.html?error=registrationFailed");
         }
     }
 }
