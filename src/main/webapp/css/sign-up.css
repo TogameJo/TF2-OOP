@@ -12,7 +12,7 @@ html{
 .main-content{
     width: 1170px;
     max-width: calc(100% - 40px);
-        /* Khi thu nhỏ trình duyệt 2 bên vẫn cách 50px */
+        /* Khi thu nhỏ trình duyệt 2 bên vẫn cách 40px */
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,8 +20,6 @@ body{
     font-size: 1.6rem;
 }
 .header .body{
-    display: flex;
-    align-items: center;
     padding: 35px 0px 0px;
 }
 .logo{
@@ -33,7 +31,7 @@ body{
 }
 /* ===============sign-up============== */
 body{
-    /* height: 400px; */
+    height: 100vh  !important;
     background-image: linear-gradient(to bottom, #beebf8, #165096);
     font-family: "Roboto Flex", sans-serif;
 }
@@ -42,9 +40,6 @@ body{
     height: 570px;
     margin: 0px auto 3px;
     background-color: white;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     border-radius: 10px;
     box-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.207);
 }

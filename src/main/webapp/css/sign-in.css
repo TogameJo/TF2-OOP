@@ -20,8 +20,6 @@ body{
     font-size: 1.6rem;
 }
 .header .body{
-    display: flex;
-    align-items: center;
     padding: 35px 0px 0px;
 }
 .logo{
@@ -33,14 +31,14 @@ body{
 }
 /* ===============sign-in============== */
 body{
-    /* height: 400px; */
+    height: 100vh  !important;
     background-image: linear-gradient(to bottom, #beebf8, #165096);
     font-family: "Roboto Flex", sans-serif;
 }
 .signin-box{
     width: 36rem;
     height: 30rem;
-    margin: 20px auto 3px;
+    margin: 120px auto auto;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.207);
