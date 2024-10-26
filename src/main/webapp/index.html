@@ -18,7 +18,7 @@
     <title>Trang chủ</title>
     <link rel="favicon" href="">
 </head>
-<body style="height: 10000px;">
+<body style="height: 10000px; overflow: auto;" class="main_body">
     <!-- <div class="mess icon-bottom">
         <a href="https://www.facebook.com/camondaghe/" target="_blank">
             <i class="fa-brands fa-facebook-messenger"></i>
@@ -32,14 +32,14 @@
         <div class="main-content">
             <div class="body">
                 <!-- logo -->
-                <a href="" target="_self"><img src="./IMG/logo2.png" alt="logo" class="logo"></a>
+                <a href="" target="_self"><img src="./images/logo2.png" alt="logo" class="logo"></a>
                 <!-- nav -->
                 <nav class="nav">
                     <ul>
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Job managment</a></li>
+                        <li class="active main_function"><a href="#">Home</a></li>
+                        <li><a href="#" class="main_function">About</a></li>
+                        <li><a href="#" class="main_function">Contact</a></li>
+                        <li><a href="#" class="main_function">Job management</a></li>
                     </ul>
                 </nav>
                 <!-- btn -->
@@ -83,24 +83,34 @@
                     </div>
                     <div class="hero-icon">
                         <div class="icon-text">
-                            <div class = "icon-bgr"><i class="fa-solid fa-calendar"></i></div>
-                            <p>Schedule</p>
+                            <a href="" class="schedule" style="cursor: pointer;"> 
+                                <div class = "icon-bgr"><i class="fa-solid fa-calendar"></i></div>
+                                <p>Schedule</p>
+                            </a>
                         </div>
                         <div class="icon-text">
-                            <div class = "icon-bgr"><i class="fa-solid fa-file"></i></div>
-                            <p>Worksheet</p>
+                           <a href="" class="worksheet" style="cursor: pointer;">
+                                <div class = "icon-bgr"><i class="fa-solid fa-file"></i></div>
+                                <p>Worksheet</p>
+                           </a>
                         </div>
                         <div class="icon-text">
-                           <div class = "icon-bgr"> <i class="fa-solid fa-clipboard-check"></i></div>
-                            <p>Job confirmations</p>
+                           <a href="" class="job_confirm" style="cursor: pointer;"> 
+                               <div class = "icon-bgr"> <i class="fa-solid fa-clipboard-check"></i></div>
+                                <p>Job confirmations</p>
+                           </a>
                         </div>
                         <div class="icon-text">
-                            <div class = "icon-bgr"><i class="fa-solid fa-shield"></i></div>
-                            <p>Security</p>
+                            <a href="" class="secu" style="cursor: pointer;">
+                                <div class = "icon-bgr"><i class="fa-solid fa-shield"></i></div>
+                                <p>Security</p>
+                            </a>
                         </div>
                         <div class="icon-text">
-                            <div class = "icon-bgr"><i class="fa-solid fa-comments"></i></div>
-                            <p>Comments</p>
+                            <a href="" class="comment" style="cursor: pointer;">
+                                <div class = "icon-bgr"><i class="fa-solid fa-comments"></i></div>
+                                <p>Comments</p>
+                            </a>
                         </div>
                     </div>
                     <div class="img">

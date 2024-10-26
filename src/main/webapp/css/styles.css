@@ -1,82 +1,73 @@
-*{
-    box-sizing: border-box;
-        /* giúp kiểm soát tổng thể kích thước */
-}
-html{
-    font-size: 62.5%;
-        /* quy đổi 1 rem = 10px */
-    --color--midnight:#0b2642;
-    --text-color-hero: #171100;
-}
-body{
-    font-size: 1.6rem;
-    font-family: "Poppins", sans-serif;
+/* ================== Reset ================== */
+* {
+    box-sizing: border-box; /* giúp kiểm soát tổng thể kích thước */
 }
 
-/* ==================common================= */
-a{
+html {
+    font-size: 62.5%; /* quy đổi 1 rem = 10px */
+    --color--midnight: #0b2642;
+    --text-color-hero: #171100;
+}
+
+body {
+    font-size: 1.6rem;
+    height: 102rem;
+    /* background-image: linear-gradient(to bottom, #beebf8, #165096); */
+    font-family: "Roboto Flex", sans-serif;
+}
+
+/* ================== Common ================== */
+a {
     text-decoration: none;
 }
-.main-content{
+
+.main-content {
     width: 1170px;
-    max-width: calc(100% - 40px);
-        /* Khi thu nhỏ trình duyệt 2 bên vẫn cách 40px */
+    max-width: calc(100% - 40px); /* Khi thu nhỏ trình duyệt 2 bên vẫn cách 40px */
     margin-left: auto;
     margin-right: auto;
 }
-/* .icon-bottom{
-    font-size: 50px; 
-    position: fixed;
-    right: 9px;
-    bottom: 40px;
-}
-.fa-facebook-messenger{
-    color: #00a1ff;
-} */
-/* ==================header================= */
-.header{
+
+/* ================== Header ================== */
+.header {
     height: 110px;
-    /* background-color: rgb(75, 189, 204); */
-    /* background-image: url(../IMG/banner.jpg); */
 }
-    /* cố định thanh nav */
-.header.fixed{
+
+.header.fixed {
     position: sticky;
     top: -30px;
     background-color: #fff;
-    /* border: 0.1px solid black; */
-    /* padding-right: 2px; */
     box-shadow: 0 0 0 0.5px #17110026;
 }
-.header .body{
+
+.header .body {
     display: flex;
     align-items: center;
     padding: 35px 0px 0px;
 }
-.nav ul{
+
+.nav ul, .action ul {
     display: flex;
 }
-.action ul{
-    display: flex;
-}
-.nav{
+
+.nav {
     margin-left: auto;
 }
-.nav a{
+
+.nav a {
     position: relative;
     color: #5f5b53;
     font-size: 1.6rem;
     margin: 8px 21px;
-    /* background-color: blue; */
 }
-    /* bôi đậm khi di chuột và click vào */
+
 .nav li.active a,
-.nav a:hover{
+.nav a:hover {
     color: #171100;
     text-shadow: 0.8px 0 0 currentColor;
 }
-    /* click */
-.nav li.active a:after{
+
+.main_body .nav li.active :after {
     position: absolute;
     left: 0;
     bottom: 0.1px;
@@ -87,7 +78,8 @@ a{
     border-radius: 1px;
     background: #171100;
 }
-.btn{
+
+.btn {
     display: block;
     min-width: 100px;
     padding: 18px 30px;
@@ -98,96 +90,277 @@ a{
     font-weight: 600;
     background-color: #171100;
 }
-.header .btn-sign-up{
-    margin-left: 0 px;
+
+.header .btn-sign-up {
+    margin-left: 0;
 }
-.header .btn-sign-in{
+
+.header .btn-sign-in {
     margin-right: 10px;
     margin-left: 49px;
 }
+
 .header .btn-sign-up:hover,
-.header .btn-sign-in:hover{
-    /* color: #5f5b53; */
-    background-color: #000000a6 ;
+.header .btn-sign-in:hover {
+    background-color: #000000a6;
     text-decoration: underline;
 }
-.logo{
+
+.logo {
     width: 120px;
     height: auto;
     margin-right: auto;
     margin-left: 20px;
-    align-self: center;
 }
-/* ==============hero================ */
-.hero{
+
+/* ================== Hero ================== */
+.hero {
     padding-top: 96px;
     box-sizing: border-box;
     background-image: linear-gradient(to bottom, #beebf8, #165096);
-    background-size: cover; 
-    background-position: center; 
-    border-radius: 0px 0px 90px 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 90px 90px;
     height: 70rem;
 }
-.hero-element .header{
+
+.hero-element .header {
     color: var(--text-color-hero);
     text-align: center;
     font-size: 6.4rem;
     font-family: "Roboto Flex", sans-serif;
     font-weight: 700;
 }
-div .space{
+
+.space {
     width: 100%;
     padding-top: 4rem;
 }
-.hero-txt{
+
+.hero-txt {
     color: var(--text-color-hero);
     text-align: center;
     font-weight: 500;
 }
-.hero-btn{
+
+.hero-btn {
     margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: white; */
     margin-bottom: 60px;
 }
-.join-us-btn{
+
+.join-us-btn {
     background-color: #086dff;
     padding: 18px 48px;
     margin-right: 15px;
 }
-.hero-btn a:nth-child(2){
+
+.hero-btn a:nth-child(2) {
     color: var(--text-color-hero);
     font-weight: 600;
-    display: inline-block; 
-    border-bottom: 2px solid var(--text-color-hero); 
-    padding-bottom: 5px; 
+    display: inline-block;
+    border-bottom: 2px solid var(--text-color-hero);
+    padding-bottom: 5px;
 }
-.hero-btn a:first-child:hover{
+
+.hero-btn a:first-child:hover {
     background-color: #024bb0;
 }
-.hero-icon{
+
+.hero-icon {
     height: 60px;
     display: flex;
     justify-content: center;
+    gap: 150px;
 }
+
 .icon-text {
     text-align: center;
 }
-.hero-icon i{
+
+.hero-icon i {
     font-size: 4rem;
     color: var(--text-color-hero);
-    /* color: #fff; */
 }
+
 .hero-icon p {
-    font-family:"Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
-    margin-top: 10px; 
+    margin-top: 10px;
     font-size: 1.6rem;
-    color: var(--text-color-hero); 
-    /* color: #fff */
+    color: var(--text-color-hero);
 }
-.hero-icon{
-    gap: 150px;
+
+/* ================== Sign-Up ================== */
+.body_register{
+    background-image: linear-gradient(to bottom, #beebf8, #165096);
+    overflow: auto;
+}
+.signup-box {
+    width: 360px;
+    height: 570px;
+    margin: 20px auto 3px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.207);
+}
+
+.signup-box h1 {
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px;
+}
+
+.signup-box h4 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 300px;
+    margin-left: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 3px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #165096;
+    color: #fff;
+    font-size: 2rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #1650968d;
+    cursor: pointer;
+}
+
+.footer-policy {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 1.6rem;
+}
+.footer-policy a{
+    color: blue;
+}
+.footer-policy a:active{
+    color: rgb(0, 0, 0);
+}
+
+.homeback {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+.homeback a {
+    text-decoration: none;
+    color: #165096;
+}
+
+.para {
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.para a {
+    text-decoration: none;
+    color: #080808;
+}
+.register_after{
+    background-color: #000000a6;
+}
+
+/* ================== Sign-In ================== */
+.body_login{
+    background-image: linear-gradient(to bottom, #beebf8, #165096);
+    overflow: auto;
+}
+.signin-box {
+    width: 36rem;
+    height: 30rem;
+    margin: 120px auto auto;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.207);
+}
+
+.signin-box h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.signin-box form {
+    width: 30rem;
+    margin: 2rem;
+}
+
+.signin-box form label {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.signin-box form input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="button"] {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #165096;
+    color: #fff;
+    font-size: 2rem;
+}
+
+input[type="button"]:hover {
+    background-color: #1650968d;
+    cursor: pointer;
+}
+
+.para-2 {
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.para-2 a {
+    text-decoration: none;
+    color: #080808;
+}
+.login_after{
+    background-color: #000000a6;
 }
