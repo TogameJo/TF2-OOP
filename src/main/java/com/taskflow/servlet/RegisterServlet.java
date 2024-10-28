@@ -21,6 +21,7 @@ public class RegisterServlet extends HttpServlet {
     private static final String DB_USER = "root"; 
     private static final String DB_PASSWORD = "B22dcat143abc123"; 
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
 
