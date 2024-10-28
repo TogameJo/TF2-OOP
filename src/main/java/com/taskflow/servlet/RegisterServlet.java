@@ -2,7 +2,6 @@ package com.taskflow.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.servlet.ServletException;
@@ -11,16 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.taskflow.utils.DatabaseConnection;
+
 @WebServlet("/RegisterServlet") 
 
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    // Database connection parameters
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/user_management"; 
-    private static final String DB_USER = "root"; 
-    private static final String DB_PASSWORD = "B22dcat143abc123"; 
-
+    // ghi đè phương thức doPost từ HttpSrvlet để xử lý yêu cầu và phản hồi
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
@@ -33,21 +30,21 @@ public class RegisterServlet extends HttpServlet {
 
         // Kiểm tra mật khẩu có khớp hay không
         if (!password.equals(confirmPassword)) {
-            response.sendRedirect("signup.html?error=passwordsDoNotMatch"); //gửi thông báo lỗi về sign-up
+            response.sendRedirect("signup.html?error=passwordsDoNotMatch"); //gửi thông báo mật khẩu không khớp về sign-up
             return;
         }
 
         // Kết nối tới cơ sở dữ liệu
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)) {
+        try (Connection connection = DatabaseConnection.getConnection()) {
             String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                preparedStatement.setString(1, username);
+                preparedStatement.setString(1, username);  //gán giá trị cho value ? theo thứ tự
                 preparedStatement.setString(2, email);
                 preparedStatement.setString(3, password);
-                preparedStatement.executeUpdate();
+                preparedStatement.executeUpdate(); //cập nhật giá trị(insert)
             }
-            response.sendRedirect("signup.html?success=registrationSuccessful");
-        } catch (Exception e) {
+            response.sendRedirect("signup.html?success=registrationSuccessful"); //đăng nhập thành công vè sign up
+        } catch (Exception e) { //nếu cho ngoaij lệ in ra thông báo lỗi
             e.printStackTrace();
             response.sendRedirect("signup.html?error=registrationFailed");
         }

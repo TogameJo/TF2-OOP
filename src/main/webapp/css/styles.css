@@ -10,6 +10,7 @@ html {
     --background-image:linear-gradient(to bottom, #beebf8, #165096);
     --bx-shadow:10px 10px 10px rgba(0, 0, 0, 0.4);
     --btn-color:#086dff;
+    scroll-behavior: smooth;
 }
 
 body {
